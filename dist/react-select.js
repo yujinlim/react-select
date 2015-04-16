@@ -285,7 +285,6 @@ var Select = React.createClass({
 			return;
 		}
 
-		event.preventDefault();
 		if (this.state.isFocused) {
 			this.setState({
 				isOpen: true
