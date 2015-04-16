@@ -277,7 +277,6 @@ var Select = React.createClass({
 			return;
 		}
 
-		event.stopPropagation();
 		event.preventDefault();
 		if (this.state.isFocused) {
 			this.setState({
