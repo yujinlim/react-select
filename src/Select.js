@@ -276,7 +276,8 @@ var Select = React.createClass({
 		if (this.props.disabled || (event.type === 'mousedown' && event.button !== 0)) {
 			return;
 		}
-
+		event.stopPropagation();
+		
 		if (this.state.isFocused) {
 			this.setState({
 				isOpen: true
