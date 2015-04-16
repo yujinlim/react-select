@@ -73,7 +73,6 @@ var Select = React.createClass({
 			matchPos: 'any',
 			matchProp: 'any',
 			inputProps: {},
-			inputValue: this.props.value,
 			onOptionLabelClick: undefined
 		};
 	},
@@ -89,6 +88,7 @@ var Select = React.createClass({
     * - placeholder
     * - focusedOption
    */
+			inputValue: this.props.value,
 			options: this.props.options,
 			isFocused: false,
 			isOpen: false,
