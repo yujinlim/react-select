@@ -67,7 +67,7 @@ var Select = React.createClass({
 			matchPos: 'any',
 			matchProp: 'any',
 			inputProps: {},
-
+			inputValue: this.props.value,
 			onOptionLabelClick: undefined
 		};
 	},
@@ -196,7 +196,6 @@ var Select = React.createClass({
 		return {
 			value: values.map(function(v) { return v.value; }).join(this.props.delimiter),
 			values: values,
-			inputValue: '',
 			filteredOptions: filteredOptions,
 			placeholder: !this.props.multi && values.length ? values[0].label : this.props.placeholder,
 			focusedOption: !this.props.multi && values.length ? values[0] : filteredOptions[0]
@@ -494,7 +493,6 @@ var Select = React.createClass({
 		if (!this.state.isOpen) {
 			this.setState({
 				isOpen: true,
-				inputValue: '',
 				focusedOption: this.state.focusedOption || ops[dir === 'next' ? 0 : ops.length - 1]
 			}, this._bindCloseMenuIfClickedOutside);
 			return;
